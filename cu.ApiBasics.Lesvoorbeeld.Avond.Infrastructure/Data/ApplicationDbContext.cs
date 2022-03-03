@@ -1,4 +1,5 @@
-﻿using cu.ApiBAsics.Lesvoorbeeld.Avond.Core.Entities;
+﻿using cu.ApiBasics.Lesvoorbeeld.Avond.Infrastructure.Data.Seeding;
+using cu.ApiBAsics.Lesvoorbeeld.Avond.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace cu.ApiBasics.Lesvoorbeeld.Avond.Infrastructure.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            Seeder.Seed(modelBuilder);
             base.OnModelCreating(modelBuilder);
         }
     }
